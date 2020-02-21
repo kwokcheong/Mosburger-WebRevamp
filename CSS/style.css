@@ -1,0 +1,261 @@
+body{
+  height: 100%;
+  background-color: white;
+  padding: 0px;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+}
+/* Hamburger*/
+a {
+  color: #000;
+}
+/* header */
+
+.header {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+/* LOGO */
+#logo img{
+  padding: 30px;
+}
+
+#top-border{
+  height: 200px;
+  background-image:url(../images/border.png);
+  background-repeat:no-repeat;
+  background-position-x:70%;
+}
+
+/* MENU */
+ul#menu{
+  background-color: white;
+  height: 35px;
+  padding: 15px;
+  margin: 0px;
+
+}
+
+ul#menu li{
+  color: black;
+  display: inline;
+  margin-left:10px;
+  margin-right:10px;
+}
+
+ul#menu li a{ 
+  text-decoration: none;
+  font-family: Verdana;
+  font-size: 17px;
+  color:grey;
+}
+
+
+/* MAIN PICTURE*/
+#hero-picture{
+  display: flex;
+  background-image: url(../images/mos-hero-crop.jpg);
+  height:800px;
+  width: 100%;
+  background-size: cover;
+  margin: 0px;
+  padding: 0.1px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  
+}
+
+/* Menu Header*/
+#menu-header{
+  font-size: 45px;
+  text-decoration:underline;
+  font-family: 'Baloo Tammudu', cursive;
+  text-align: center;
+  color:rgba(200, 29, 29, 0.938);
+}
+
+
+/* BOXES */
+#food-menu img{
+  height:160px;
+  width: 160px;
+}
+
+#food-menu{
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 0.1px black solid;
+}
+
+
+.box{
+  display: flex;
+  height: 160px;
+  width: 160px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-family: 'Baloo Tammudu', cursive;
+}
+
+
+
+@media (min-width: 48em) {
+#food-menu img{
+  height:160px;
+  width: 160px;
+}
+
+#food-menu{
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 0.1px black solid;
+}
+
+
+.box{
+  display: flex;
+  height: 160px;
+  width: 160px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-family: 'Baloo Tammudu', cursive;
+}
+
+}
