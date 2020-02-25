@@ -228,34 +228,3 @@ ul#menu li a{
   font-family: 'Baloo Tammudu', cursive;
 }
 
-
-
-@media (min-width: 48em) {
-#food-menu img{
-  height:160px;
-  width: 160px;
-}
-
-#food-menu{
-  display: flex;
-  padding: 10px;
-  margin: 10px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  border: 0.1px black solid;
-}
-
-
-.box{
-  display: flex;
-  height: 160px;
-  width: 160px;
-  margin-top: 45px;
-  margin-bottom: 45px;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  font-family: 'Baloo Tammudu', cursive;
-}
-
-}
